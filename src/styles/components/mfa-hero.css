@@ -1,0 +1,114 @@
+.mfa-hero {
+  max-width: 720px;
+  padding: 36px 12px 36px 14px;
+}
+
+.mfa-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #55dfc5;
+  color: #0a6254;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.mfa-hero__badge svg {
+  width: 12px;
+  height: 12px;
+  fill: #0a6254;
+}
+
+.mfa-hero h1 {
+  margin: 38px 0 14px;
+  font-family: var(--font-ui);
+  color: #0f1b86;
+  font-size: 78px;
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+}
+
+.mfa-hero h1 span {
+  color: #505cae;
+}
+
+.mfa-hero p {
+  max-width: 650px;
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.26;
+  color: #3a4255;
+}
+
+.mfa-hero__metrics {
+  margin-top: 34px;
+  border-top: 1px solid #d7dbe4;
+  padding-top: 26px;
+  display: flex;
+  gap: 100px;
+}
+
+.mfa-hero__metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mfa-hero__metric strong {
+  color: #0f1b86;
+  font-size: 47px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.mfa-hero__metric span {
+  color: #636a7a;
+  letter-spacing: 0.12em;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media (max-width: 1350px) {
+  .mfa-hero h1 {
+    font-size: 62px;
+  }
+
+  .mfa-hero p {
+    font-size: 28px;
+  }
+
+  .mfa-hero__metric strong {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mfa-hero {
+    padding: 14px 8px 24px;
+  }
+
+  .mfa-hero h1 {
+    font-size: 44px;
+    margin-top: 24px;
+  }
+
+  .mfa-hero p {
+    font-size: 21px;
+  }
+
+  .mfa-hero__metrics {
+    gap: 24px;
+    justify-content: space-between;
+  }
+
+  .mfa-hero__metric strong {
+    font-size: 32px;
+  }
+
+  .mfa-hero__metric span {
+    font-size: 12px;
+  }
+}
