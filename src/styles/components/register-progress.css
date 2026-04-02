@@ -1,0 +1,94 @@
+.register-progress {
+  display: grid;
+  gap: 16px;
+}
+
+.register-progress__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+}
+
+.register-progress h1 {
+  margin: 0;
+  color: #14207a;
+  font-family: var(--font-ui);
+  font-size: 49px;
+  letter-spacing: -0.03em;
+}
+
+.register-progress p {
+  margin: 4px 0 0;
+  color: #555d70;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.register-progress__eta {
+  text-align: right;
+}
+
+.register-progress__eta span {
+  display: block;
+  color: #9ca2b0;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+}
+
+.register-progress__eta strong {
+  display: block;
+  color: #1f2f92;
+  font-size: 22px;
+  margin-top: 4px;
+}
+
+.register-progress__steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #d7dce6;
+}
+
+.register-progress__step {
+  padding-top: 12px;
+  position: relative;
+}
+
+.register-progress__step span {
+  color: #9ba2b0;
+  font-size: 12px;
+  letter-spacing: 0.13em;
+  font-weight: 700;
+}
+
+.register-progress__step--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  height: 3px;
+  width: 100%;
+  background: #1c2787;
+}
+
+.register-progress__step--active span {
+  color: #26337e;
+}
+
+@media (max-width: 980px) {
+  .register-progress h1 {
+    font-size: 38px;
+  }
+
+  .register-progress p {
+    font-size: 18px;
+  }
+
+  .register-progress__eta {
+    display: none;
+  }
+}

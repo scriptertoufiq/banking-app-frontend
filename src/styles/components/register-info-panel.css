@@ -1,0 +1,130 @@
+.register-info {
+  display: grid;
+  gap: 12px;
+}
+
+.register-info__promo-card,
+.register-info__small-card,
+.register-info__help {
+  border: 1px solid #dfe4ec;
+  border-radius: 12px;
+  background: #f7f9fc;
+}
+
+.register-info__promo-card {
+  padding: 12px;
+}
+
+.register-info__image {
+  height: 112px;
+  border-radius: 8px;
+  background:
+    linear-gradient(130deg, rgba(9, 18, 42, 0.7), rgba(10, 12, 18, 0.8)),
+    radial-gradient(circle at 20% 20%, rgba(64, 110, 163, 0.25), transparent 60%),
+    #101420;
+  margin-bottom: 12px;
+}
+
+.register-info h3 {
+  margin: 0;
+  color: #1d2a84;
+  font-family: var(--font-ui);
+  font-size: 34px;
+}
+
+.register-info p {
+  margin: 8px 0 12px;
+  color: #546073;
+  font-size: 20px;
+  line-height: 1.42;
+}
+
+.register-info ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.register-info li {
+  position: relative;
+  padding-left: 20px;
+  color: #334056;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.register-info li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0d8a72;
+}
+
+.register-info__small-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+}
+
+.register-info__small-card strong {
+  color: #2d3a7f;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+}
+
+.register-info__small-card p {
+  margin: 2px 0 0;
+  font-size: 14px;
+}
+
+.register-info__small-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #eef2f8;
+  border: 1px solid #d9dfeb;
+  color: #7f8799;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.register-info__help {
+  height: 52px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  color: #4c556b;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+@media (max-width: 980px) {
+  .register-info h3 {
+    font-size: 28px;
+  }
+
+  .register-info p,
+  .register-info li {
+    font-size: 17px;
+  }
+
+  .register-info__small-card strong {
+    font-size: 17px;
+  }
+
+  .register-info__help {
+    font-size: 18px;
+  }
+}

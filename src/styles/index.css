@@ -2,7 +2,12 @@
 @import './base/reset.css';
 @import './base/variables.css';
 @import './pages/login-mfa-page.css';
+@import './pages/register-page.css';
 @import './components/mfa-header.css';
 @import './components/mfa-hero.css';
 @import './components/mfa-card.css';
 @import './components/mfa-footer.css';
+@import './components/register-header.css';
+@import './components/register-progress.css';
+@import './components/register-form-card.css';
+@import './components/register-info-panel.css';
