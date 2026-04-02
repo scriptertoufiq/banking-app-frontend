@@ -1,0 +1,31 @@
+.compliance {
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+  margin-top: 28px;
+  color: #8a8d97;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+}
+
+.compliance__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.compliance__icon {
+  width: 14px;
+  height: 14px;
+  fill: #9ca0ac;
+}
+
+@media (max-width: 900px) {
+  .compliance {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    padding: 0 14px;
+    text-align: center;
+  }
+}

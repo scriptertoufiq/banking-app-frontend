@@ -1,0 +1,38 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 36px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.topbar__brand {
+  font-family: var(--font-ui);
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.topbar__meta {
+  font-family: var(--font-ui);
+  letter-spacing: 0.24em;
+  font-size: 11px;
+  color: #555a69;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .topbar {
+    padding: 18px 20px;
+  }
+
+  .topbar__brand {
+    font-size: 24px;
+  }
+
+  .topbar__meta {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+  }
+}

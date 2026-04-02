@@ -1,0 +1,19 @@
+:root {
+  --color-bg: #eaedf2;
+  --color-surface: #f4f5f8;
+  --color-card: #f7f8fa;
+  --color-primary: #0d146f;
+  --color-accent: #026f61;
+  --color-text: #343645;
+  --color-muted: #6f7381;
+  --color-border: #e6e8ee;
+  --color-input: #e2e5ea;
+  --color-button: #0f1b86;
+  --color-button-hover: #121f97;
+
+  --font-body: 'Manrope', 'Segoe UI', sans-serif;
+  --font-ui: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --radius-card: 12px;
+  --radius-field: 8px;
+  --shadow-card: 0 30px 60px rgba(13, 20, 111, 0.05);
+}
