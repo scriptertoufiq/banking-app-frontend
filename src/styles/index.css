@@ -6,6 +6,7 @@
 @import './pages/register-page.css';
 @import './pages/dashboard-page.css';
 @import './pages/transfer-money-page.css';
+@import './pages/transaction-history-page.css';
 @import './components/mfa-header.css';
 @import './components/mfa-hero.css';
 @import './components/mfa-card.css';
@@ -18,3 +19,4 @@
 @import './components/dashboard-layout.css';
 @import './components/dashboard-cards.css';
 @import './components/transfer-money.css';
+@import './components/transaction-history.css';

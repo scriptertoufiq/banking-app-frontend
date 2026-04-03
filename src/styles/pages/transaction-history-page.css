@@ -1,0 +1,58 @@
+.transaction-history-page {
+  min-height: 100vh;
+  background: #eef1f6;
+  color: #2b3350;
+}
+
+.transaction-history-main {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 22px 24px 26px;
+  display: grid;
+  gap: 18px;
+}
+
+.transaction-history-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.transaction-history-hero h1 {
+  margin: 0;
+  color: #111f82;
+  font-family: var(--font-ui);
+  font-size: 52px;
+  letter-spacing: -0.04em;
+}
+
+.transaction-history-hero p {
+  margin: 6px 0 0;
+  color: #4f5970;
+  font-size: 17px;
+}
+
+.transaction-history-download {
+  height: 48px;
+  border-radius: 8px;
+  background: #1b2a8d;
+  color: #fff;
+  padding: 0 18px;
+  font-weight: 700;
+}
+
+@media (max-width: 920px) {
+  .transaction-history-main {
+    padding: 14px 12px 20px;
+  }
+
+  .transaction-history-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .transaction-history-hero h1 {
+    font-size: 40px;
+  }
+}
