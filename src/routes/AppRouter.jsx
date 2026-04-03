@@ -3,6 +3,7 @@ import DashboardPage from '../pages/DashboardPage'
 import ForgotPasswordPage from '../pages/ForgotPasswordPage'
 import LoginMfaPage from '../pages/LoginMfaPage'
 import RegisterPage from '../pages/RegisterPage'
+import ScheduleStatementPage from '../pages/ScheduleStatementPage'
 import TransactionHistoryPage from '../pages/TransactionHistoryPage'
 import TransferMoneyPage from '../pages/TransferMoneyPage'
 
@@ -19,6 +20,8 @@ function AppRouter() {
         <Route path="/transfers" element={<TransferMoneyPage />} />
         <Route path="/transaction-history" element={<TransactionHistoryPage />} />
         <Route path="/transection-history" element={<TransactionHistoryPage />} />
+        <Route path="/schedule-statement" element={<ScheduleStatementPage />} />
+        <Route path="/request-statement" element={<ScheduleStatementPage />} />
         <Route path="*" element={<Navigate to="/login/mfa" replace />} />
       </Routes>
     </BrowserRouter>
