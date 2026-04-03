@@ -3,6 +3,7 @@ import DashboardPage from '../pages/DashboardPage'
 import ForgotPasswordPage from '../pages/ForgotPasswordPage'
 import LoginMfaPage from '../pages/LoginMfaPage'
 import RegisterPage from '../pages/RegisterPage'
+import TransferMoneyPage from '../pages/TransferMoneyPage'
 
 function AppRouter() {
   return (
@@ -13,6 +14,8 @@ function AppRouter() {
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/transfer-money" element={<TransferMoneyPage />} />
+        <Route path="/transfers" element={<TransferMoneyPage />} />
         <Route path="*" element={<Navigate to="/login/mfa" replace />} />
       </Routes>
     </BrowserRouter>

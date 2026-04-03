@@ -5,6 +5,7 @@
 @import './pages/forgot-password-page.css';
 @import './pages/register-page.css';
 @import './pages/dashboard-page.css';
+@import './pages/transfer-money-page.css';
 @import './components/mfa-header.css';
 @import './components/mfa-hero.css';
 @import './components/mfa-card.css';
@@ -16,3 +17,4 @@
 @import './components/register-info-panel.css';
 @import './components/dashboard-layout.css';
 @import './components/dashboard-cards.css';
+@import './components/transfer-money.css';
