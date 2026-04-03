@@ -46,6 +46,8 @@
 }
 
 .dashboard-sidebar__nav-item {
+  display: flex;
+  align-items: center;
   height: 38px;
   border-radius: 8px;
   text-align: left;
@@ -66,6 +68,9 @@
 }
 
 .dashboard-sidebar__quick-transfer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 42px;
   border-radius: 8px;
   background: #182587;
@@ -74,6 +79,8 @@
 }
 
 .dashboard-sidebar__link {
+  display: flex;
+  align-items: center;
   text-align: left;
   color: #4f5970;
   padding: 8px 4px;
@@ -115,6 +122,8 @@
 }
 
 .dashboard-topbar__tab {
+  display: inline-flex;
+  align-items: center;
   color: #586077;
   font-size: 13px;
   padding: 8px 10px;

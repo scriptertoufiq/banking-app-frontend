@@ -47,6 +47,8 @@
 }
 
 .transfer-sidebar__nav-item {
+  display: flex;
+  align-items: center;
   height: 38px;
   border-radius: 8px;
   text-align: left;
@@ -67,6 +69,9 @@
 }
 
 .transfer-sidebar__quick-transfer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 42px;
   border-radius: 8px;
   background: #182587;
@@ -75,6 +80,8 @@
 }
 
 .transfer-sidebar__link {
+  display: flex;
+  align-items: center;
   text-align: left;
   color: #4f5970;
   padding: 8px 4px;
@@ -115,6 +122,8 @@
 }
 
 .transfer-topbar__tab {
+  display: inline-flex;
+  align-items: center;
   color: #596279;
   font-size: 13px;
 }

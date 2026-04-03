@@ -1,3 +1,6 @@
+import { NavLink } from 'react-router-dom'
+import { privateVaultTabs } from '../../navigation'
+
 function BellIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -20,9 +23,19 @@ function ScheduleStatementTopbar() {
       <div className="schedule-topbar__links">
         <span className="schedule-topbar__brand">The Private Bank</span>
         <nav aria-label="Primary tabs" className="schedule-topbar__tabs">
-          <button type="button" className="schedule-topbar__tab">Portfolio</button>
-          <button type="button" className="schedule-topbar__tab">Insights</button>
-          <button type="button" className="schedule-topbar__tab">Concierge</button>
+          {privateVaultTabs.map((item) => (
+            <NavLink
+              key={item.label}
+              to={item.to}
+              className={({ isActive }) =>
+                isActive
+                  ? 'schedule-topbar__tab schedule-topbar__tab--active'
+                  : 'schedule-topbar__tab'
+              }
+            >
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
       </div>
 

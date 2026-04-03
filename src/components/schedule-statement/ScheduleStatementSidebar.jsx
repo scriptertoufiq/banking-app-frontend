@@ -1,10 +1,5 @@
-const navItems = [
-  { label: 'Wealth Overview' },
-  { label: 'Checking Account' },
-  { label: 'Savings & Deposits' },
-  { label: 'Investment Portfolio' },
-  { label: 'Credit Lines' },
-]
+import { NavLink } from 'react-router-dom'
+import { globalWealthSidebarItems } from '../../navigation'
 
 function ScheduleStatementSidebar() {
   return (
@@ -19,24 +14,32 @@ function ScheduleStatementSidebar() {
         </div>
 
         <nav className="schedule-sidebar__nav" aria-label="Primary navigation">
-          {navItems.map((item) => (
-            <button key={item.label} type="button" className="schedule-sidebar__nav-item">
+          {globalWealthSidebarItems.map((item) => (
+            <NavLink
+              key={item.label}
+              to={item.to}
+              className={({ isActive }) =>
+                isActive
+                  ? 'schedule-sidebar__nav-item schedule-sidebar__nav-item--active'
+                  : 'schedule-sidebar__nav-item'
+              }
+            >
               {item.label}
-            </button>
+            </NavLink>
           ))}
         </nav>
       </div>
 
       <div className="schedule-sidebar__bottom">
-        <button type="button" className="schedule-sidebar__link">
+        <NavLink to="/dashboard" className="schedule-sidebar__link">
           Settings
-        </button>
-        <button type="button" className="schedule-sidebar__link">
+        </NavLink>
+        <NavLink to="/schedule-statement" className="schedule-sidebar__link">
           Support
-        </button>
-        <button type="button" className="schedule-sidebar__advisor">
+        </NavLink>
+        <NavLink to="/transfer-money" className="schedule-sidebar__advisor">
           Contact Advisor
-        </button>
+        </NavLink>
       </div>
     </aside>
   )

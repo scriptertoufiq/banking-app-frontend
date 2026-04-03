@@ -37,6 +37,8 @@
 }
 
 .th-topbar__tab {
+  display: inline-flex;
+  align-items: center;
   color: #5a637c;
   padding: 8px 4px;
   border-bottom: 2px solid transparent;

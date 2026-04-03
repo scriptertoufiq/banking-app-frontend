@@ -1,3 +1,6 @@
+import { NavLink } from 'react-router-dom'
+import { privateVaultHistoryTabs } from '../../navigation'
+
 function BellIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -28,10 +31,19 @@ function TransactionHistoryTopbar() {
       <div className="th-topbar__left">
         <span className="th-topbar__brand">Private Vault</span>
         <nav className="th-topbar__tabs" aria-label="Primary navigation">
-          <button type="button" className="th-topbar__tab">Portfolio</button>
-          <button type="button" className="th-topbar__tab">Payments</button>
-          <button type="button" className="th-topbar__tab th-topbar__tab--active">History</button>
-          <button type="button" className="th-topbar__tab">Support</button>
+          {privateVaultHistoryTabs.map((item) => (
+            <NavLink
+              key={item.label}
+              to={item.to}
+              className={({ isActive }) =>
+                isActive
+                  ? 'th-topbar__tab th-topbar__tab--active'
+                  : 'th-topbar__tab'
+              }
+            >
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
       </div>
 

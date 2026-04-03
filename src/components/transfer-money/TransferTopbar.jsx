@@ -1,3 +1,6 @@
+import { NavLink } from 'react-router-dom'
+import { primaryTabs } from '../../navigation'
+
 function BellIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -28,9 +31,19 @@ function TransferTopbar() {
       <div className="transfer-topbar__nav">
         <span className="transfer-topbar__brand">The Private Bank</span>
         <nav className="transfer-topbar__tabs" aria-label="Primary sections">
-          <button type="button" className="transfer-topbar__tab">Portfolio</button>
-          <button type="button" className="transfer-topbar__tab">Insights</button>
-          <button type="button" className="transfer-topbar__tab">Concierge</button>
+          {primaryTabs.map((item) => (
+            <NavLink
+              key={item.label}
+              to={item.to}
+              className={({ isActive }) =>
+                isActive
+                  ? 'transfer-topbar__tab transfer-topbar__tab--active'
+                  : 'transfer-topbar__tab'
+              }
+            >
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
       </div>
 

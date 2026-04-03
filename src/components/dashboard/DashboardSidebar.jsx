@@ -1,10 +1,5 @@
-const navItems = [
-  { label: 'Accounts', active: true },
-  { label: 'Transfers' },
-  { label: 'Beneficiaries' },
-  { label: 'Investments' },
-  { label: 'Security' },
-]
+import { NavLink } from 'react-router-dom'
+import { wealthSidebarItems } from '../../navigation'
 
 function DashboardSidebar() {
   return (
@@ -19,33 +14,33 @@ function DashboardSidebar() {
         </div>
 
         <nav className="dashboard-sidebar__nav" aria-label="Primary dashboard navigation">
-          {navItems.map((item) => (
-            <button
+          {wealthSidebarItems.map((item) => (
+            <NavLink
               key={item.label}
-              type="button"
-              className={
-                item.active
+              to={item.to}
+              className={({ isActive }) =>
+                isActive
                   ? 'dashboard-sidebar__nav-item dashboard-sidebar__nav-item--active'
                   : 'dashboard-sidebar__nav-item'
               }
             >
               {item.label}
-            </button>
+            </NavLink>
           ))}
         </nav>
       </div>
 
       <div className="dashboard-sidebar__bottom">
-        <button type="button" className="dashboard-sidebar__quick-transfer">
+        <NavLink to="/transfer-money" className="dashboard-sidebar__quick-transfer">
           + Quick Transfer
-        </button>
+        </NavLink>
 
-        <button type="button" className="dashboard-sidebar__link">
+        <NavLink to="/schedule-statement" className="dashboard-sidebar__link">
           Support
-        </button>
-        <button type="button" className="dashboard-sidebar__link dashboard-sidebar__link--danger">
+        </NavLink>
+        <NavLink to="/login/mfa" className="dashboard-sidebar__link dashboard-sidebar__link--danger">
           Sign Out
-        </button>
+        </NavLink>
       </div>
     </aside>
   )

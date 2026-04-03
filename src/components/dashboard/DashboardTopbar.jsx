@@ -1,14 +1,25 @@
+import { NavLink } from 'react-router-dom'
+import { primaryTabs } from '../../navigation'
+
 function DashboardTopbar() {
   return (
     <header className="dashboard-topbar">
       <div className="dashboard-topbar__left">
         <span className="dashboard-topbar__brand">ThePrivateBank</span>
         <nav aria-label="Dashboard tabs" className="dashboard-topbar__tabs">
-          <button type="button" className="dashboard-topbar__tab dashboard-topbar__tab--active">
-            Portfolio
-          </button>
-          <button type="button" className="dashboard-topbar__tab">Insights</button>
-          <button type="button" className="dashboard-topbar__tab">Concierge</button>
+          {primaryTabs.map((item) => (
+            <NavLink
+              key={item.label}
+              to={item.to}
+              className={({ isActive }) =>
+                isActive
+                  ? 'dashboard-topbar__tab dashboard-topbar__tab--active'
+                  : 'dashboard-topbar__tab'
+              }
+            >
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
       </div>
 

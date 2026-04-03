@@ -46,6 +46,8 @@
 }
 
 .schedule-sidebar__nav-item {
+  display: flex;
+  align-items: center;
   height: 38px;
   border-radius: 8px;
   text-align: left;
@@ -60,12 +62,17 @@
 }
 
 .schedule-sidebar__link {
+  display: flex;
+  align-items: center;
   text-align: left;
   color: #4f5970;
   padding: 8px 4px;
 }
 
 .schedule-sidebar__advisor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 42px;
   border-radius: 8px;
   background: #182587;
@@ -107,6 +114,8 @@
 }
 
 .schedule-topbar__tab {
+  display: inline-flex;
+  align-items: center;
   color: #5d667a;
   font-size: 13px;
 }

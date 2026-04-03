@@ -1,10 +1,5 @@
-const navItems = [
-  { label: 'Accounts' },
-  { label: 'Transfers', active: true },
-  { label: 'Beneficiaries' },
-  { label: 'Investments' },
-  { label: 'Security' },
-]
+import { NavLink } from 'react-router-dom'
+import { wealthSidebarItems } from '../../navigation'
 
 function TransferSidebar() {
   return (
@@ -19,33 +14,33 @@ function TransferSidebar() {
         </div>
 
         <nav className="transfer-sidebar__nav" aria-label="Primary navigation">
-          {navItems.map((item) => (
-            <button
+          {wealthSidebarItems.map((item) => (
+            <NavLink
               key={item.label}
-              type="button"
-              className={
-                item.active
+              to={item.to}
+              className={({ isActive }) =>
+                isActive
                   ? 'transfer-sidebar__nav-item transfer-sidebar__nav-item--active'
                   : 'transfer-sidebar__nav-item'
               }
             >
               {item.label}
-            </button>
+            </NavLink>
           ))}
         </nav>
       </div>
 
       <div className="transfer-sidebar__bottom">
-        <button type="button" className="transfer-sidebar__quick-transfer">
+        <NavLink to="/transfer-money" className="transfer-sidebar__quick-transfer">
           + Quick Transfer
-        </button>
+        </NavLink>
 
-        <button type="button" className="transfer-sidebar__link">
+        <NavLink to="/schedule-statement" className="transfer-sidebar__link">
           Support
-        </button>
-        <button type="button" className="transfer-sidebar__link transfer-sidebar__link--danger">
+        </NavLink>
+        <NavLink to="/login/mfa" className="transfer-sidebar__link transfer-sidebar__link--danger">
           Sign Out
-        </button>
+        </NavLink>
       </div>
     </aside>
   )
